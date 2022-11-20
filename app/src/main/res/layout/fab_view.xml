@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.megaulorder.trippicker.fab.FabView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/fab_view"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="bottom|end"
+	android:layout_marginBottom="10dp"
+	android:layout_marginEnd="10dp"
+	android:background="@drawable/fab_background"
+	android:elevation="10dp"
+	android:gravity="center_vertical"
+	/>

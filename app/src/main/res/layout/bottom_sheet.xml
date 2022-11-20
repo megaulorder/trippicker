@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<FrameLayout
+		android:id="@+id/title_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clipToPadding="false"
+		android:minHeight="64dp"
+		android:paddingStart="24dp"
+		android:paddingLeft="24dp"
+		android:paddingEnd="12dp"
+		android:paddingRight="12dp"
+		>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:paddingTop="24dp"
+			android:paddingBottom="16dp"
+			android:textSize="21sp"
+			android:textStyle="bold"
+			android:text="航空券"
+			/>
+
+		<ImageButton
+			android:id="@+id/cancel_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical|end"
+			android:layout_marginTop="8dp"
+			android:background="?selectableItemBackgroundBorderless"
+			android:padding="12dp"
+			android:src="@drawable/ic_cross"
+			/>
+	</FrameLayout>
+
+	<com.megaulorder.trippicker.MultiNestedScrollView
+		android:id="@+id/picker_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/picker_from"
+				android:layout_width="75dp"
+				android:layout_height="150dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="から"
+				android:layout_marginEnd="24dp"/>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/picker_to"
+				android:layout_width="75dp"
+				android:layout_height="150dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="まで"/>
+
+		</LinearLayout>
+
+	</com.megaulorder.trippicker.MultiNestedScrollView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="end"
+		android:paddingHorizontal="12dp">
+		<Button
+			android:id="@+id/save_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="保存"/>
+
+	</LinearLayout>
+
+</LinearLayout>
